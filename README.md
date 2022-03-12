@@ -3,7 +3,6 @@
 
 ### Requirements: ###
  - pip install opencv-contrib-python
- - pip install deepface
 
 ### Technologies Used: ###
 - Python
