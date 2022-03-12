@@ -9,4 +9,5 @@
 - Python
 - DeepFace
 - OpenCV
+- Jupyter Notebook or Google Colab
 - FER2013 Dataset from Kaggle
