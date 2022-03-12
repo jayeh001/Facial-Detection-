@@ -1,9 +1,8 @@
 # Facial Detection #
 ## This is project created by Team Constellation for SF Hacks ##
 
-### Requirements: ###
- - pip install opencv-contrib-python
- - pip install deepface
+### Important before running project: ###
+ - pip install
 
 ### Technologies Used: ###
 - Python
