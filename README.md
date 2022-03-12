@@ -3,6 +3,7 @@
 
 ### Requirements: ###
  - pip install opencv-contrib-python
+ - pip install deepface
 
 ### Technologies Used: ###
 - Python
@@ -10,3 +11,4 @@
 - OpenCV
 - Jupyter Notebook or Google Colab
 - FER2013 Dataset from Kaggle
+- Flask
