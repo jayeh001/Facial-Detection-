@@ -1,8 +1,6 @@
 # Facial Detection Machine Learning App #
 ## This is project created by Team Constellation for SF Hacks 2021 ##
 
----
-
 ### Technologies Used: ###
 - Python
 - DeepFace
