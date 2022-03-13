@@ -17,3 +17,4 @@ Emotions are a difficult thing to pin down for most people. There is a reason wh
 ---
 
 ### What this does ###
+A user with a webcam can enter our app to provide us with a clear view of their face. 
