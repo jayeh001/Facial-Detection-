@@ -6,6 +6,31 @@ from deepface import DeepFace
 app=Flask(__name__)
 camera = cv2.VideoCapture(0)
 
+def emotion_check(expression):
+
+    show = ""
+    
+    if expression == 'happy':
+        show = "Hey, That's an absolutely beautiful smile"
+    
+    elif expression == 'sad':
+        show = 'Say Cheese!!'
+    
+    elif expression == 'neutral':
+        show = 'Wide SMILE :) !!'
+    
+    elif expression == 'disgust':
+        show = "Say EEEEEEEEEEEEE"
+
+    elif expression == 'angry':
+        show = 'Show us that beautiful smile of yours'
+    
+    elif expression == 'fear':
+        show = 'Want to talk about something?'
+
+    elif expression == 'Surprise':
+        show = 'Surprisee!!!!'        
+    return show
 
 def generate_frames():  
     while True:
@@ -30,7 +55,8 @@ def generate_frames():
 
             font = cv2.FONT_HERSHEY_TRIPLEX
 
-            cv2.putText(frame, result['dominant_emotion'], (0, 50), font, 3, (0, 0, 255), 2, cv2.LINE_4)
+            display = emotion_check(result['dominant_emotion'])
+            cv2.putText(frame, display, (0, 50), font, 1, (0, 0, 255), 2, cv2.LINE_4)
 
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
@@ -40,8 +66,11 @@ def generate_frames():
 @app.route('/')
 def index():
     return render_template('index.html')
+
 @app.route('/video_feed')
 def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
 if __name__=='__main__':
     app.run(debug=True)
